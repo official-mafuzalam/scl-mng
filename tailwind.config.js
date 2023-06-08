@@ -6,6 +6,7 @@ module.exports = {
         "./resources/**/*.vue",
         "node_modules/preline/dist/*.js",
     ],
+    darkMode: 'media',
     theme: {
         container: {
             center: true,
