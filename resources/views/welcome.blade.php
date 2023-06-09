@@ -1,5 +1,13 @@
 @extends('layouts.body')
 
+<!-- Breadcrumb -->
+@section('breadcrumb')
+    <li class="flex items-center text-sm text-gray-800 dark:text-gray-400">
+        Dashboard
+    </li>
+@endsection
+<!-- End Breadcrumb -->
+
 @section('main-content')
     <!-- Page Heading -->
     <header>

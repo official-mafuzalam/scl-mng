@@ -1,13 +1,26 @@
 @extends('layouts.body')
 
+<!-- Breadcrumb -->
+@section('breadcrumb')
+    <li class="flex items-center text-sm text-gray-800 dark:text-gray-400">
+        Students
+        <svg class="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600" width="16"
+            height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" />
+        </svg>
+    </li>
+    <li class="text-sm font-semibold text-gray-800 truncate dark:text-gray-400" aria-current="page">
+        Add Student
+    </li>
+@endsection
+<!-- End Breadcrumb -->
+
 @section('main-content')
-    <!-- Card Section -->
-    {{-- <div class="max-w-4xl px-4 py-10 sm:px-4 lg:px-8 lg:py-10 mx-auto  dark:bg-gray-700"> --}}
-    <!-- Card -->
-    <div class="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-slate-800">
+    <div class="bg-slate-300 rounded-xl shadow p-4 mb-10 sm:p-7 dark:bg-slate-800">
         <div class="mb-8">
             <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200 text-center">
-                Profile
+                Student Add Form
             </h2>
             <label class="inline-block text-sm font-medium dark:text-gray-400">
                 Personal Information
@@ -15,7 +28,8 @@
 
         </div>
 
-        <form>
+        <form method="POST" action="{{ route('student_addReq') }}">
+            @csrf
             <!-- Grid -->
             <div class="grid grid-cols-12 gap-4 sm:gap-6">
 
@@ -44,7 +58,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="student-full-name" type="text"
+                        <input name="student_name" required id="student-full-name" type="text"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="Maria">
                     </div>
@@ -60,7 +74,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="student-nid" type="number"
+                        <input name="student_nid" required id="student-nid" type="number"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="xxxx-xxxx-xxxx-xxxx">
                     </div>
@@ -76,7 +90,7 @@
                 <!-- End Col -->
 
                 <div class="col-span-9">
-                    <input id="student-email" type="email"
+                    <input name="student_email" required id="student-email" type="email"
                         class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                         placeholder="maria@site.com">
                 </div>
@@ -93,7 +107,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="student-mobile" type="text"
+                        <input name="student_mobile" required id="student-mobile" type="tel"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="+880xxxx-xxxxxx" value="+880">
                     </div>
@@ -109,7 +123,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="father-full-name" type="text"
+                        <input name="father_name" required id="father-full-name" type="text"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="Mr. Jak">
                     </div>
@@ -125,7 +139,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="father-nid" type="number"
+                        <input name="father_nid" required id="father-nid" type="number"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="xxxx-xxxx-xxxx-xxxx">
                     </div>
@@ -143,7 +157,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="father-mobile" type="text"
+                        <input name="father_mobile" required id="father-mobile" type="tel"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="+880xxxx-xxxxxx" value="+880">
                     </div>
@@ -159,7 +173,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="mother-full-name" type="text"
+                        <input name="mother_name" required id="mother-full-name" type="text"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="Ms. Rose">
                     </div>
@@ -175,7 +189,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="mother-nid" type="number"
+                        <input name="mother_nid" required id="mother-nid" type="number"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="xxxx-xxxx-xxxx-xxxx">
                     </div>
@@ -193,7 +207,7 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="mother-mobile" type="text"
+                        <input name="mother_mobile" required id="mother-mobile" type="tel"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="+880xxxx-xxxxxx" value="+880">
                     </div>
@@ -208,7 +222,7 @@
                 <!-- End Col -->
 
                 <div class="col-span-9">
-                    <select id="student-gender"
+                    <select id="student-gender" name="stdent_gender"
                         class="py-2 px-3 pr-9 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
                         <option selected>Please select gender</option>
                         <option value="Male">Male</option>
@@ -227,17 +241,17 @@
 
                 <div class="col-span-9">
                     <div class="mt-2 space-y-3">
-                        <input id="af-payment-billing-address" type="text"
+                        <input name="adderss_street" required id="af-payment-billing-address" type="text"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="Street Address">
-                        <input type="text"
+                        <input name="adderss_postOffice" required type="text"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="Post office address">
                         <div class="sm:flex gap-3">
-                            <input type="text"
+                            <input name="adderss_upazila" required type="text"
                                 class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                                 placeholder="Upazila">
-                            <input type="text"
+                            <input name="adderss_zila" required type="text"
                                 class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                                 placeholder="Zila">
                         </div>
@@ -245,7 +259,7 @@
                 </div>
                 <!-- End Col -->
             </div>
-            <label class="mt-16 mb-8 inline-block text-sm font-medium dark:text-gray-400">
+            <label class="mt-6 mb-6 sm:mt-16 sm:mb-8 inline-block text-sm font-medium dark:text-gray-400">
                 Academic Information
             </label>
             <div class="grid grid-cols-12 gap-4 sm:gap-6">
@@ -253,7 +267,34 @@
                 <div class="col-span-3">
                     <div class="inline-block">
                         <label for="student-class" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200">
-                            Phone
+                            Class
+                        </label>
+                    </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-span-9">
+                    <select id="student-class" name="student_class"
+                        class="py-2 px-3 pr-9 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+                        <option>Please select class</option>
+                        <option value="1">1 - One</option>
+                        <option value="2">2 - Two</option>
+                        <option value="3">3 - Three</option>
+                        <option value="4">4 - Four</option>
+                        <option value="5">5 - Five</option>
+                        <option value="6">6 - Six</option>
+                        <option value="7">7 - Seven</option>
+                        <option value="8">8 - Eight</option>
+                        <option value="9">9 - Nine</option>
+                        <option value="10">10 - Ten</option>
+                    </select>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-span-3">
+                    <div class="inline-block">
+                        <label for="student-roll" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200">
+                            Roll no
                         </label>
                     </div>
                 </div>
@@ -261,25 +302,56 @@
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input id="student-class" type="text"
+                        <input name="student_roll" required id="student-roll" type="number"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                            placeholder="+880xxxx-xxxxxx" value="+880">
+                            placeholder="xxx">
                     </div>
                 </div>
                 <!-- End Col -->
 
+                <div class="col-span-3">
+                    <div class="inline-block">
+                        <label for="student-reg" class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200">
+                            Reg no
+                        </label>
+                        <span class="text-sm text-gray-400 dark:text-gray-600">
+                            (Optional)
+                        </span>
+                    </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-span-9">
+                    <div class="sm:flex">
+                        <input name="student_reg" id="student-reg" type="number"
+                            class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                            placeholder="xxxxxxxxxxxx">
+                    </div>
+                </div>
+                <!-- End Col -->
+
+
+
+
+
+
+
+
             </div>
             <!-- End Grid -->
 
-            <div class="mt-5 flex justify-end gap-x-2">
-                <button type="button"
-                    class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-lg align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-                    Cancel
-                </button>
-                <button type="button"
+
+
+
+
+
+
+
+
+
+            <div class="mt-5 flex justify-center gap-x-2">
+                <input name="" type="submit" value="Save"
                     class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">
-                    Save changes
-                </button>
             </div>
         </form>
     </div>

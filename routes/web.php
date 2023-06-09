@@ -20,3 +20,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/student_add', [StudentController::class, 'student_add'])->name('student_add');
+
+Route::post('/student_add', [StudentController::class, 'student_addReq'])->name('student_addReq');
+
+Route::get('/student_all', [StudentController::class, 'student_allPage'])->name('student_allPage');
