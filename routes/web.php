@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\Admin\StudentController as AdminStudent;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +21,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/student_add', [StudentController::class, 'student_add'])->name('student_add');
+Route::get('/student_add', [AdminStudent::class, 'student_add'])->name('student_add');
 
-Route::post('/student_add', [StudentController::class, 'student_addReq'])->name('student_addReq');
+Route::post('/student_add', [AdminStudent::class, 'student_addReq'])->name('student_addReq');
 
-Route::get('/student_all', [StudentController::class, 'student_allPage'])->name('student_allPage');
+Route::get('/student_all', [AdminStudent::class, 'student_allPage'])->name('student_allPage');

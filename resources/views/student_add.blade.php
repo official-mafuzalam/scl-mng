@@ -222,7 +222,7 @@
                 <!-- End Col -->
 
                 <div class="col-span-9">
-                    <select id="student-gender" name="stdent_gender"
+                    <select id="student-gender" name="student_gender"
                         class="py-2 px-3 pr-9 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
                         <option selected>Please select gender</option>
                         <option value="Male">Male</option>
@@ -241,17 +241,17 @@
 
                 <div class="col-span-9">
                     <div class="mt-2 space-y-3">
-                        <input name="adderss_street" required id="af-payment-billing-address" type="text"
+                        <input name="address_street" required id="af-payment-billing-address" type="text"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="Street Address">
-                        <input name="adderss_postOffice" required type="text"
+                        <input name="address_postOffice" required type="text"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="Post office address">
                         <div class="sm:flex gap-3">
-                            <input name="adderss_upazila" required type="text"
+                            <input name="address_upazila" required type="text"
                                 class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                                 placeholder="Upazila">
-                            <input name="adderss_zila" required type="text"
+                            <input name="address_zila" required type="text"
                                 class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                                 placeholder="Zila">
                         </div>
@@ -320,10 +320,28 @@
                     </div>
                 </div>
                 <!-- End Col -->
+                <div class="col-span-9">
+                    <div class="sm:flex">
+                        <input name="student_reg" required id="student-roll" type="number"
+                            class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                            placeholder="xxx">
+                    </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-span-3">
+                    <div class="inline-block">
+                        <label for="student-password"
+                            class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200">
+                            Password
+                        </label>
+                    </div>
+                </div>
+                <!-- End Col -->
 
                 <div class="col-span-9">
                     <div class="sm:flex">
-                        <input name="student_reg" id="student-reg" type="number"
+                        <input name="password" id="student-password" type="text"
                             class="py-2 px-3 pr-11 block w-full border-gray-200 shadow-lg text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                             placeholder="xxxxxxxxxxxx">
                     </div>
