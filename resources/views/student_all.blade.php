@@ -2,16 +2,28 @@
 
 <!-- Breadcrumb -->
 @section('breadcrumb')
-    <li class="flex items-center text-sm text-gray-800 dark:text-gray-400">
-        Students
-        <svg class="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600" width="16"
-            height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" />
-        </svg>
+    <li>
+        <div class="flex items-center">
+            <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <a href="#"
+                class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">Students</a>
+        </div>
     </li>
-    <li class="text-sm font-semibold text-gray-800 truncate dark:text-gray-400" aria-current="page">
-        All Student
+    <li aria-current="page">
+        <div class="flex items-center">
+            <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">All Student</span>
+        </div>
     </li>
 @endsection
 <!-- End Breadcrumb -->
@@ -249,9 +261,8 @@
                         <!-- End Table -->
 
                         <!-- Footer -->
-                        <div
-                            class="px-4 py-4 border-t border-gray-200 dark:border-gray-700">
-                            
+                        <div class="px-4 py-4 border-t border-gray-200 dark:border-gray-700">
+
                             <div>
                                 <div class="inline-flex gap-x-2">
                                     {{ $students->links() }}

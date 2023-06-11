@@ -2,8 +2,17 @@
 
 <!-- Breadcrumb -->
 @section('breadcrumb')
-    <li class="flex items-center text-sm text-gray-800 dark:text-gray-400">
-        Dashboard
+    <li>
+        <div class="flex items-center">
+            <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <a href="#"
+                class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">Dashboard</a>
+        </div>
     </li>
 @endsection
 <!-- End Breadcrumb -->
@@ -16,8 +25,8 @@
             role="alert">
             <div class="flex">
                 <div class="flex-shrink-0">
-                    <svg class="h-4 w-4 text-teal-400 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" viewBox="0 0 16 16">
+                    <svg class="h-4 w-4 text-teal-400 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path
                             d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                     </svg>
@@ -73,24 +82,29 @@
         <div class="grid grid-cols-4 gap-4">
 
             <div class="rounded-md bg-slate-500 dark:bg-slate-900 p-2">
-                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">Total Student</p>
+                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">
+                    Total Student</p>
                 <p class="sm:font-bold text-slate-950 dark:text-gray-400 text-center">200</p>
             </div>
             <div class="rounded-md bg-slate-500 dark:bg-slate-900 p-2">
-                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">Total Teacher</p>
+                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">
+                    Total Teacher</p>
                 <p class="sm:font-bold text-slate-950 dark:text-gray-400 text-center">200</p>
             </div>
             <div class="rounded-md bg-slate-500 dark:bg-slate-900 p-2">
-                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">Today's Total
+                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">
+                    Today's Total
                     Attendance</p>
                 <p class="sm:font-bold text-slate-950 dark:text-gray-400 text-center">150</p>
             </div>
             <div class="rounded-md bg-slate-500 dark:bg-slate-900 p-2">
-                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">Running Notice</p>
+                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">
+                    Running Notice</p>
                 <p class="sm:font-bold text-slate-950 dark:text-gray-400 text-center">5</p>
             </div>
             <div class="rounded-md bg-slate-500 dark:bg-slate-900 p-2">
-                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">This Month Deposit
+                <p class="sm:font-bold sm:text-lg text-sm overflow-hidden text-teal-500 dark:text-gray-200 text-center">This
+                    Month Deposit
                 </p>
                 <p class="sm:font-bold text-slate-950 dark:text-gray-400 text-center">20000</p>
             </div>
